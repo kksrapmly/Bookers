@@ -1,0 +1,45 @@
+<!-- Books部分と成功メッセージ -->
+<p id="notice">
+  <%= notice %>
+</p>
+<h1 class="index-headline">Books</h1>
+
+<table>
+  <thead>
+  	<tr>
+  	  <th>Title</th>
+  	  <th>Body</th>
+  	  <th></th>
+    </tr>
+  </thead>
+  
+  <% @books.each do |book| %>
+  <tbody>
+    <tr>
+      <td><span><%= book.title %></span></td>
+      <td><span><%= book.body %></span></td>
+      <td><span class="link">
+      	<%= link_to "Show", book_path(book.id), class: "show_#{book.id}" %></span></td>
+      <td><span class="link">
+      	<%= link_to "Edit", edit_book_path(book.id), class: "edit_#{book.id}" %></span></td>
+      <td><span class="link">
+      	<%= link_to "Destroy", book_path(book.id), method: :delete, "data-confilm" => "Are you sure?", class: "destroy_#{book.id}" %></span></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+
+
+<!-- New book 投稿機能 -->
+<h2>New book</h2>
+<%= form_for(@book) do |f| %>
+  <p>
+    <%= f.label :title, "Title" %><br>
+    <%= f.text_field :title, class: "book_title" %>
+  </p>
+  <p>
+    <%= f.label :body, "Body" %><br>
+    <%= f.text_area :body, class: "book_body" %>
+  </p>
+  <%= f.submit "Create Book" %>
+<% end %>
