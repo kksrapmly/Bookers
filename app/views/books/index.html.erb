@@ -33,12 +33,11 @@
 <!-- New book 投稿機能 -->
 <h2>New book</h2>
 <%= form_for(@book) do |f| %>
-
-  <p>
+  <p class="label">
     <%= f.label :title, "Title" %><br>
     <%= f.text_field :title, class: "book_title" %>
   </p>
-  <p>
+  <p class="label">
     <%= f.label :body, "Body" %><br>
     <%= f.text_area :body, class: "book_body" %>
   </p>

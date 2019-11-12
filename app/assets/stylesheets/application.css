@@ -16,8 +16,8 @@
 
 /* 全ページ */
 body {
-  margin: 30px;
-  line-height: 20px;
+  margin: 33px;
+  line-height: 18px;
   font-size: 13px;
   color: #333;
 }
@@ -49,6 +49,10 @@ td {
 p {
   margin-bottom: 33px;
 }
+p.label {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
 
 
@@ -61,4 +65,28 @@ p {
 /* 成功メッセージ */
 #notice {
   color: green;
+}
+
+/* error */
+.error {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+.error-headline {
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: red;
+  color: white;
+}
+
+
+div.field_with_errors {
 }
